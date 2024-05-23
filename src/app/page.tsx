@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
+import { memo } from "react";
 
-function page() {
+const page = memo(function page() {
   return (
     <div>
       <h1>home</h1>
-      <Button>Hello</Button>
     </div>
   );
-}
+});
 
 export default page;
