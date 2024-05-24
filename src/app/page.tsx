@@ -1,13 +1,18 @@
-import { Button } from "@/components/ui/button";
-import React from "react";
+import About from "@/components/home/about";
+import CelebrateMoment from "@/components/home/celebrate-moment";
+import Header from "@/components/home/header";
+import ShopCategories from "@/components/home/shop-categories";
+import React, { memo } from "react";
 
-function page() {
+const page = memo(function page() {
   return (
     <div>
-      <h1>home</h1>
-      <Button>Hello</Button>
+      <Header />
+      <CelebrateMoment />
+      <ShopCategories />
+      <About />
     </div>
   );
-}
+});
 
 export default page;
