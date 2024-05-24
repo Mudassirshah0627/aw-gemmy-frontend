@@ -21,6 +21,24 @@ const config = {
     },
     extend: {
       colors: {
+        "white-color": {
+          DEFAULT: "#fff",
+        },
+        "orange-color": {
+          DEFAULT: "#F1641E",
+        },
+        "black-color": {
+          DEFAULT: "#000",
+        },
+        "red-color": {
+          DEFAULT: "#FF0000",
+        },
+        "green-color": {
+          DEFAULT: " #008000",
+        },
+        "gray-color": {
+          DEFAULT: "#808080",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
