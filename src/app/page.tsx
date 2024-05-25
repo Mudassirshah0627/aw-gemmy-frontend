@@ -6,7 +6,7 @@ import React, { memo } from "react";
 
 const page = memo(function page() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <CelebrateMoment />
       <ShopCategories />
