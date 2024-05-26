@@ -13,10 +13,7 @@ function Listings() {
     setAddItemPopup(!addItemPopup);
   }
   return (
-    <div className="flex gap-12">
-      <div className="w-[25vw] border-2">
-        <Header />
-      </div>
+    <div className="flex gap-12 absolute right-0 top-0">
       <div>
         <div className="mt-4 w-full md:w-[70vw] px-4 pt-4 md:pt-0 z-0">
           {/* title and search bar  */}

@@ -4,10 +4,14 @@ import { Button } from "../ui/button";
 import Icon from "../icon/icon";
 import OurMenu from "./our-menu";
 import SearchInput from "../ui/search-input";
+import SignIn from "../auth/user-login";
 
 const Header = memo(function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpenLogin, setIsOpenLogin] = useState(false);
+  function showLoginPopup() {
+    setIsOpenLogin(true);
+  }
   function showMenu() {
     setIsOpen(!isOpen);
   }
@@ -44,7 +48,7 @@ const Header = memo(function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-4 mr-20 xl:mr-12">
-            <div>
+            <div onClick={showLoginPopup}>
               <Button className="bg-transparent text-black-color hover:bg-transparent border-2 border-orange-color">
                 Sign in
               </Button>
@@ -67,9 +71,8 @@ const Header = memo(function Header() {
           <p className=" font-semibold cursor-pointer">Fashion Finds</p>
           <p className=" font-semibold cursor-pointer">Registry</p>
         </div>
-
-        {/* our menu  */}
       </div>
+      {/* our menu  */}
       <div
         className="flex items-center gap-x-4 relative cursor-pointer md:hidden"
         onClick={showMenu}
@@ -78,6 +81,11 @@ const Header = memo(function Header() {
         Category
         {isOpen && <OurMenu />}
       </div>
+
+      {/* login ? */}
+      {isOpenLogin && (
+        <SignIn toggle={isOpenLogin} setToggle={setIsOpenLogin} />
+      )}
     </div>
   );
 });
