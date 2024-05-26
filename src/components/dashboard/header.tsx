@@ -17,8 +17,8 @@ const AdminHeader = memo(function AdminHeader() {
   }
 
   return (
-    <div className=" md:w-[15rem] lg:w-[20rem] z-50 ml-12">
-      <div className="md:hidden absolute top-4 left-4 z-50 ">
+    <div className="w-[15rem] lg:w-[20rem]">
+      <div className="md:hidden absolute top-4 left-4 z-50">
         {isOpen ? (
           <div onClick={closeShowMenu} className="cursor-pointer ">
             <Icon name="X" />

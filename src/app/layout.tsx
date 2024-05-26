@@ -23,9 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <RTKProvider>
-          <AdminHeaderWrapper />
           <HomeHeaderWrapper />
-          {children}
+          <div className="flex">
+            <AdminHeaderWrapper />
+            {children}
+          </div>
         </RTKProvider>
       </body>
     </html>

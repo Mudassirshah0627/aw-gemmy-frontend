@@ -4,7 +4,7 @@ import React, { memo } from "react";
 
 const Dashboard = memo(function Dashboard() {
   return (
-    <div className="mt-10 w-full md:w-[70vw] px-4  absolute top-0 right-0">
+    <div className="mt-10 w-full md:w-[70vw] px-4">
       {/* title  */}
       <div className="sm:flex items-center justify-between ">
         <div className="w-1/2">
