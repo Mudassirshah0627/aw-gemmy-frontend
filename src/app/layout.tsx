@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import RTKProvider from "@/redux/provider";
+import {
+  AdminHeaderWrapper,
+  HomeHeaderWrapper,
+} from "@/components/re-usable/header-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <RTKProvider>
-          {/* <HeaderWrapper /> */}
+          <AdminHeaderWrapper />
+          <HomeHeaderWrapper />
           {children}
         </RTKProvider>
       </body>

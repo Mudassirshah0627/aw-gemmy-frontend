@@ -3,8 +3,9 @@ import { memo, useState } from "react";
 import Icon from "../icon/icon";
 import SearchInput from "../ui/search-input";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-const Header = memo(function Header() {
+const AdminHeader = memo(function AdminHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeShowMenu() {
@@ -14,8 +15,9 @@ const Header = memo(function Header() {
   function showMenu() {
     setIsOpen(!isOpen);
   }
+
   return (
-    <div className="md:w-[15rem] lg:w-[20rem] z-50">
+    <div className=" md:w-[15rem] lg:w-[20rem] z-50 ml-12">
       <div className="md:hidden absolute top-4 left-4 z-50 ">
         {isOpen ? (
           <div onClick={closeShowMenu} className="cursor-pointer ">
@@ -53,7 +55,7 @@ const Header = memo(function Header() {
 
         {/* navigation  */}
         <div className="flex flex-col gap-y-4 my-6 transition-all ease-in duration-1000">
-          <a href="/dashboard">
+          <Link href="/dashboard">
             <div
               className="flex items-center gap-x-4 cursor-pointer text-xl"
               onClick={closeShowMenu}
@@ -61,10 +63,10 @@ const Header = memo(function Header() {
               <Icon name="Home" />
               Dashboard
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between  py-2   rounded-md ">
-            <a href="/listings">
+            <Link href="/listings">
               <div
                 className="flex items-center gap-x-4 cursor-pointer text-xl"
                 onClick={closeShowMenu}
@@ -72,9 +74,9 @@ const Header = memo(function Header() {
                 <Icon name="ListTodo" />
                 Listings
               </div>
-            </a>
+            </Link>
           </div>
-          <a href="">
+          <Link href="">
             <div
               className="flex items-center gap-x-4 cursor-pointer text-xl"
               onClick={closeShowMenu}
@@ -82,10 +84,10 @@ const Header = memo(function Header() {
               <Icon name="Mail" />
               Messages
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between  py-2   rounded-md ">
-            <a href="">
+            <Link href="">
               <div
                 className="flex items-center gap-x-4 cursor-pointer text-xl"
                 onClick={closeShowMenu}
@@ -93,17 +95,17 @@ const Header = memo(function Header() {
                 <Icon name="Truck" />
                 Orders & Shipping
               </div>
-            </a>
+            </Link>
           </div>
-          <a href="">
+          <Link href="">
             <div className="flex items-center gap-x-4 cursor-pointer text-xl ">
               <Icon name="Star" />
               Star Seller
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between  py-2   rounded-md ">
-            <a href="">
+            <Link href="">
               <div
                 className="flex items-center gap-x-4 cursor-pointer text-xl"
                 onClick={closeShowMenu}
@@ -111,9 +113,9 @@ const Header = memo(function Header() {
                 <Icon name="BarChart" />
                 Stats
               </div>
-            </a>
+            </Link>
           </div>
-          <a href="">
+          <Link href="">
             <div
               className="flex items-center gap-x-4 cursor-pointer text-xl"
               onClick={closeShowMenu}
@@ -121,10 +123,10 @@ const Header = memo(function Header() {
               <Icon name="Landmark" />
               Finances
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between  py-2   rounded-md ">
-            <a href="">
+            <Link href="">
               <div
                 className="flex items-center gap-x-4 cursor-pointer text-xl"
                 onClick={closeShowMenu}
@@ -132,17 +134,17 @@ const Header = memo(function Header() {
                 <Icon name="Megaphone" />
                 Marketing
               </div>
-            </a>
+            </Link>
           </div>
-          <a href="">
+          <Link href="">
             <div className="flex items-center gap-x-4 cursor-pointer text-xl ">
               <Icon name="Grip" />
               Integration
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center justify-between  py-2   rounded-md ">
-            <a href="">
+            <Link href="">
               <div
                 className="flex items-center gap-x-4 cursor-pointer text-xl"
                 onClick={closeShowMenu}
@@ -150,9 +152,9 @@ const Header = memo(function Header() {
                 <Icon name="User" />
                 Community & Help
               </div>
-            </a>
+            </Link>
           </div>
-          <a href="">
+          <Link href="">
             <div
               className="flex items-center gap-x-4 cursor-pointer text-xl"
               onClick={closeShowMenu}
@@ -160,17 +162,11 @@ const Header = memo(function Header() {
               <Icon name="Settings" />
               Settings
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   );
 });
 
-export default Header;
-
-// export const HeaderWrapper = memo(function HeaderWrapper() {
-//   const router = useRouter();
-
-//   return router.pathname !== "/" ? <Header /> : null;
-// });
+export default AdminHeader;
