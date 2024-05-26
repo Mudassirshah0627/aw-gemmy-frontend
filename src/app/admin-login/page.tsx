@@ -115,12 +115,6 @@ const SignIn = memo(function SignIn(props) {
               )}
             </Formik>
           </div>
-          {/* <div
-            className="absolute top-0 z-[999] -right-12 text-white-color cursor-pointer"
-            onClick={closeLoginPopup}
-          >
-            <Icon name="X" />
-          </div> */}
         </div>
       </div>
     </div>
