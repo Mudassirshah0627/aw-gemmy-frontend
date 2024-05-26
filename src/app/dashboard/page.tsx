@@ -12,9 +12,8 @@ const Dashboard = memo(function Dashboard() {
             Whats new PreciousGemPort
           </h1>
           <p className="flex items-center gap-x-1">
-            171 orders | Create a new listing{" "}
+            171 orders | Create a new Listings
             <span className="mt-1 cursor-pointer">
-              {" "}
               <Icon name="ArrowRight" />
             </span>
           </p>
